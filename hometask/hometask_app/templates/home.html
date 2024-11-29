@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home page</title>
+	</head>
+	<body>
+		<h1>Welcome to our home page</h1>
+		<h2>Name : {{author}}</h2>
+		<h2>Age : {{age}}</h2>
+		<h2>List : {{lst}}</h2>
+
+		<!-- Conditional Statement -->
+		<!-- {% if age >= 20 %}
+		<h4>You will get driving license</h4>
+		{% elif age >= 10 and age <= 19 %}
+		<h4>You will not get driving license</h4>
+		{% else %}
+		<h4>You're a child</h4>
+		{% endif %} {{lst}} -->
+
+		<h2>{{ lst | join:" - " }}</h2>
+		<h2>{{ birthday | date:"D d M Y" }}</h2>
+		<h2>{{ lst | length }}</h2>
+		<h2>{{'Happy coding. Python is fun.' | truncatewords:2}}</h2>
+		<h2>{{"Python is Fun" | cut:" "}}</h2>
+		<h2>{{ value | default:"nothing" }}</h2>
+		<h2>{{ lst | linenumbers }}</h2>
+		<h2>{{lst | lower}}</h2>
+		<h2>{{ lst | make_list }}</h2>
+		<h2>{{ lst | slice:":2" }}</h2>
+		<h2>{{ birthday | time:"H:i" }}</h2>
+        <h2>{{ page | title }}</h2>
+        <h2>{{ lst  | unordered_list }}</h2>
+        <h2>{{ author | wordcount }}</h2>
+        <h2>{{ diff | dictsort:"age" }}</h2>
+        <h2>{{ lst | last }}</h2>
+
+		<!-- For loop -->
+		<!-- {% for i in courses %}
+		<h3>{{i.id}} {{i.name}} {{i.fee}}</h3>
+		{% endfor %} -->
+	</body>
+</html>
